@@ -78,12 +78,12 @@
   background: #39b6e2;
 }
 
-.submit-mistake {
+.submit-сorrect {
   border: 2px solid #8fbe83;
   background: #8fbe83;
 }
 
-.submit-correct {
+.submit-mistake {
   border: 2px solid #f05a69;
   background: #f05a69;
 }
@@ -91,4 +91,18 @@
 .submit-disabled {
   border: 2px solid #b9e0ed;
   background: #b9e0ed;
+}
+
+.hint {
+  background: #add9da;
+  padding: 10px;
+  border-radius: 6px;
+  border-color: #add9da;
+  display: inline-block;
+  text-align: center;
+  align-self: center
+}
+
+.hint-hidden {
+  display: none;
 }
