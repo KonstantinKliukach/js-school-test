@@ -104,5 +104,5 @@
 }
 
 .hint-hidden {
-  display: none;
+  visibility: hidden;
 }

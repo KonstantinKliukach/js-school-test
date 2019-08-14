@@ -11,9 +11,9 @@ class Task {
 
   registerEvents() {
     [...this.variants].forEach(variant => {
-      variant.addEventListener('click', this.selectAnswer.bind(this))
+      variant.addEventListener('click', (e) => this.selectAnswer(e))
     });
-    this.submit.addEventListener('click', this.submitTask.bind(this))
+    this.submit.addEventListener('click', (e) => this.submitTask(e))
   }
 
   selectAnswer(e) {
@@ -47,7 +47,8 @@ class Task {
       variant.classList.remove('variant-choosen')
       variant.classList.add('variant-default')
       this.submit.classList.remove('submit-mistake')
-      this.submit.classList.add('submit-disabled')
+      this.submit.classList.add('submit-default')
+      this.submit.disabled = false;
     })
   }
 
@@ -66,6 +67,7 @@ class Task {
         this.submit.classList.remove('submit-default')
         this.submit.classList.add('submit-mistake')
         this.submit.disabled = true;
+        
 
         setTimeout(this.returnToDefault.bind(this), 1000)
 
