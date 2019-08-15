@@ -48,7 +48,9 @@ class Task {
       variant.classList.add('variant-default')
       this.submit.classList.remove('submit-mistake')
       this.submit.classList.add('submit-default')
+      this.selectedAnswers = []
       this.submit.disabled = false;
+
     })
   }
 
